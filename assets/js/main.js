@@ -11,6 +11,7 @@
 let app = new Vue({
     el: '#app',
     data:{
+        // array di task esistenti
         taskList: [
             'Pulire codice',
             'Refactoring',
@@ -19,10 +20,9 @@ let app = new Vue({
         ],
         toDo: '',
     },
-    created(){
-    },
     methods:{
         insertTask(){
+            //condizione della lunghezza della stringa
            if (this.toDo.length >= 3) {
             this.taskList.push(this.toDo);
             console.log(this.taskList);
@@ -31,6 +31,7 @@ let app = new Vue({
                alert('devi inserire una Task di almeno 3 lettere');
            }
         },
+        //cancellare task a scelta
         cancelTask(i){
             
           this.$delete(this.taskList, i);

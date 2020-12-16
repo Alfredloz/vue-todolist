@@ -7,14 +7,22 @@
     <title>TODO LIST</title>
 </head>
 <body>
-    <div id="app">
-        <input id="insert" type="text" @keyup.13="insertTask" v-model="toDo">
-        <button @click="insertTask">Add Task</button>
-        <ul id="to_do" v-if="taskList.length > 0">
-            <li v-for="(task, index) in taskList" >{{task}}<i class="far fa-times-circle" @click="cancelTask(index)"></i> </li>
-        </ul>
-        <p v-else>Non hai niente da fare</p>
-
+    <div class="d_flex">
+        <div id="app"  class="d_flex">
+            <!-- form per inserire le task -->
+            <div class="formTask">
+                <input id="insert" type="text" @keyup.13="insertTask" v-model="toDo">
+            <button @click="insertTask">Add Task</button>
+            </div>
+            <!-- lista delle task -->
+           <div class="listTask">
+            <ul id="to_do" v-if="taskList.length > 0">
+                <li v-for="(task, index) in taskList" >{{task}}<i class="far fa-times-circle" @click="cancelTask(index)"></i> </li>
+            </ul>
+            <p v-else>Non hai niente da fare</p>
+           </div>
+    
+        </div>
     </div>
     <!-- js & library vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
