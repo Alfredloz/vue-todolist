@@ -20,10 +20,10 @@ let app = new Vue({
         document: document.getElementById('insert').value,
     },
     methods:{
-        insertTask(){
-            this.taskList.push(this.document);
+        insertTask(i){
+            this.taskList.push(i.value);
             console.log(this.taskList);
-
+            console.log(this.document);
         }
     }
 });
