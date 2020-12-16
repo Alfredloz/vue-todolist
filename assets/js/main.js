@@ -17,13 +17,13 @@ let app = new Vue({
             'Ripasso',
             'recap'
         ],
-        document: document.getElementById('insert').value,
+        toDo: '',
     },
     methods:{
-        insertTask(i){
-            this.taskList.push(i.value);
+        insertTask(){
+            this.taskList.push(this.toDo);
             console.log(this.taskList);
-            console.log(this.document);
+            this.toDo = '';
         }
     }
 });
