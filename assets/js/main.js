@@ -18,7 +18,6 @@ let app = new Vue({
             'recap'
         ],
         toDo: '',
-        index: 0
     },
     created(){
     },
@@ -32,9 +31,9 @@ let app = new Vue({
                alert('devi inserire una Task di almeno 3 lettere');
            }
         },
-        cancelTask(index){
+        cancelTask(i){
             
-          this.$delete(this.taskList, index);
+          this.$delete(this.taskList, i);
         }
     }
 });

@@ -10,10 +10,10 @@
     <div id="app">
         <input id="insert" type="text" @keyup.13="insertTask" v-model="toDo">
         <button @click="insertTask">Add Task</button>
-        <ul id="to_do">
+        <ul id="to_do" v-if="taskList.length > 0">
             <li v-for="(task, index) in taskList" >{{task}}<i class="far fa-times-circle" @click="cancelTask(index)"></i> </li>
-
         </ul>
+        <p v-else>Non hai niente da fare</p>
 
     </div>
     <!-- js & library vue -->
