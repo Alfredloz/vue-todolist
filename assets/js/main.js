@@ -17,5 +17,13 @@ let app = new Vue({
             'Ripasso',
             'recap'
         ],
+        document: document.getElementById('insert').value,
+    },
+    methods:{
+        insertTask(){
+            this.taskList.push(this.document);
+            console.log(this.taskList);
+
+        }
     }
 });
