@@ -4,23 +4,38 @@
     margin: 0;
     box-sizing: border-box;
 }
-/* css todoList*/
-/* body */
+/* utility class */
 .d_flex{
     display: flex;
     justify-content: center;
     
    
+
+}
+/* utility class */
+/* css todoList*/
+/* body */
+.container {
+    margin: 1rem;
+}
+img {
+    height: auto;
+    width: 50rem;
 }
 #app{
+    border-radius: 5px;
     align-items: center;
     flex-direction: column;
     height: auto;
     width: 800px;
-    background-color: rgb(95, 95, 108);
+    box-shadow:  1px 1px 5px 5px rgba(108, 108, 74, 0.769);
 }
 ul {
    
     list-style-type: none;
+    margin: 2rem;
+}
+.list_task p{
+    font-size: 20px;
 }
 

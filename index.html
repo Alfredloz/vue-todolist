@@ -7,19 +7,28 @@
     <title>TODO LIST</title>
 </head>
 <body>
-    <div class="d_flex">
+    <div class="d_flex container">
         <div id="app"  class="d_flex">
             <!-- form per inserire le task -->
+            <img :src="img" alt="">
+            
+            <h1>Bentornata, Beatrix</h1>
+            <p>Inserisci i nomi dei traditori e compi la tua vendetta!</p>
             <div class="formTask">
                 <input id="insert" type="text" @keyup.13="insertTask" v-model="toDo">
             <button @click="insertTask">Add Task</button>
             </div>
             <!-- lista delle task -->
-           <div class="listTask">
+           <div class="list_task">
             <ul id="to_do" v-if="taskList.length > 0">
                 <li v-for="(task, index) in taskList" >{{task}}<i class="far fa-times-circle" @click="cancelTask(index)"></i> </li>
             </ul>
-            <p v-else>Non hai niente da fare</p>
+           <div class="fine" v-else>
+            <audio controls autoplay >
+                <source src="./assets/audio/bill_dies.mp3" type="audio/mpeg">
+            </audio>
+            <p>La tua vendetta ha finito il suo ciclo!!(?)</p>
+           </div>
            </div>
     
         </div>

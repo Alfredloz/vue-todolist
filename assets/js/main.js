@@ -13,12 +13,13 @@ let app = new Vue({
     data:{
         // array di task esistenti
         taskList: [
-            'Pulire codice',
-            'Refactoring',
-            'Ripasso',
-            'recap'
+            'Testa di rame',
+            'Crotalo ceraste',
+            'Mocassino acquatico',
+            "l'incantatore di serpenti"
         ],
         toDo: '',
+        img: './assets/img/beatrix.jpg'
     },
     methods:{
         insertTask(){
