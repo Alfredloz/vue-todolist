@@ -21,9 +21,16 @@ let app = new Vue({
     },
     methods:{
         insertTask(){
+           if (this.toDo.length >= 3) {
             this.taskList.push(this.toDo);
             console.log(this.taskList);
             this.toDo = '';
+           } else {
+               alert('devi inserire una Task di almeno 3 lettere')
+           }
+        },
+        cancelTask(){
+            this.taskList.pop(this);
         }
     }
 });

@@ -9,8 +9,9 @@
 <body>
     <div id="app">
         <input id="insert" type="text" @keyup.13="insertTask" v-model="toDo">
+        <button v-on:click="insertTask">Add Task</button>
         <ul id="to_do">
-            <li v-for="task in taskList" >{{task}}<i class="far fa-times-circle"></i> </li>
+            <li v-for="task in taskList" >{{task}}<i class="far fa-times-circle" @click="cancelTask"></i> </li>
 
         </ul>
 
