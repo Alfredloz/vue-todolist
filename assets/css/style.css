@@ -23,6 +23,7 @@ img {
     width: 50rem;
 }
 #app{
+    position: relative;
     border-radius: 5px;
     align-items: center;
     flex-direction: column;
@@ -30,12 +31,53 @@ img {
     width: 800px;
     box-shadow:  1px 1px 5px 5px rgba(108, 108, 74, 0.769);
 }
+#app h1 {
+    font-size: 50px;
+    position: absolute;
+    top: 12rem;
+    left: 2rem;
+    text-shadow: 2px 2px grey;
+}
+#app p {
+    font-size: 25px;
+    margin: 2rem;
+}
+/* input and button section */
+#app .form_task {
+    justify-content: space-around;
+}
+.form_task input{
+    width: 20rem;
+    height: 1.5rem;
+    border: none;
+    box-shadow:  1px 1px 2px 2px  rgba(0, 0, 0, 0.338);
+    border-radius: 5px;
+}
+.form_task button{
+    width: 10rem;
+    height: 1.5rem;
+    background-color: white;
+    box-shadow: inset none;
+    border: 1px solid #222121ec;
+    box-shadow:  1px 1px rgba(0, 0, 0, 0.338);
+    border-radius: 5px;
+}
+/* /input and button section */
 ul {
-   
+
     list-style-type: none;
     margin: 2rem;
 }
+
 .list_task p{
     font-size: 20px;
 }
-
+/* fine della lista */
+.fine p {
+    font-size: 40px;
+}
+.fine{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

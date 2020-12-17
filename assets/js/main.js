@@ -29,7 +29,7 @@ let app = new Vue({
             console.log(this.taskList);
             this.toDo = '';
            } else {
-               alert('devi inserire una Task di almeno 3 lettere');
+            //    alert('devi inserire una Task di almeno 3 lettere');
            }
         },
         //cancellare task a scelta

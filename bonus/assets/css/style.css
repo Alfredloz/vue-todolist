@@ -1,0 +1,62 @@
+/* reset pagina */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* utility class */
+.d_flex{
+    display: flex;
+    justify-content: center;
+    
+   
+
+}
+/* utility class */
+/* css todoList*/
+/* body */
+.container {
+    margin: 1rem;
+}
+img {
+    height: auto;
+    width: 50rem;
+}
+#app{
+    position: relative;
+    border-radius: 5px;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    width: 800px;
+    box-shadow:  1px 1px 5px 5px rgba(108, 108, 74, 0.769);
+}
+#app h1 {
+    font-size: 50px;
+    position: absolute;
+    top: 12rem;
+    left: 2rem;
+    text-shadow: 2px 2px grey;
+}
+#app p {
+    font-size: 25px;
+    margin: 2rem;
+}
+ul {
+
+    list-style-type: none;
+    margin: 2rem;
+}
+
+.list_task p{
+    font-size: 20px;
+}
+/* fine della lista */
+.fine p {
+    font-size: 40px;
+}
+.fine{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}

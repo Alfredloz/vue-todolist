@@ -12,9 +12,9 @@
             <!-- form per inserire le task -->
             <img :src="img" alt="">
             
-            <h1>Bentornata, Beatrix</h1>
+            <h1>Ciao Beatrix</h1>
             <p>Inserisci i nomi dei traditori e compi la tua vendetta!</p>
-            <div class="formTask">
+            <div class="form_task d_flex">
                 <input id="insert" type="text" @keyup.13="insertTask" v-model="toDo">
             <button @click="insertTask">Add Task</button>
             </div>
@@ -23,11 +23,12 @@
             <ul id="to_do" v-if="taskList.length > 0">
                 <li v-for="(task, index) in taskList" >{{task}}<i class="far fa-times-circle" @click="cancelTask(index)"></i> </li>
             </ul>
-           <div class="fine" v-else>
-            <audio controls autoplay >
+           <div class="fine" v-else >
+            <p>La tua vendetta ha finito il suo corso!</p>
+            <audio volume autoplay>
                 <source src="./assets/audio/bill_dies.mp3" type="audio/mpeg">
             </audio>
-            <p>La tua vendetta ha finito il suo ciclo!!(?)</p>
+            
            </div>
            </div>
     
