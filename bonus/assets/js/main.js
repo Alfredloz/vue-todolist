@@ -23,6 +23,7 @@ let app = new Vue({
             'Mocassino acquatico',
             "l'incantatore di serpenti"
         ],
+        done:[],
         toDo: '',
         img: './assets/img/beatrix.jpg'
     },
@@ -41,6 +42,12 @@ let app = new Vue({
         cancelTask(i){
             
           this.$delete(this.taskList, i);
+          for (let i = 0; i < this.taskList.length; i++) {
+              const element = this.taskList[i];
+              this.done.unshift(element);
+          }
+          console.log(this.done);
+          console.log(this.taskList);
         }
     }
 

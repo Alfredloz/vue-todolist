@@ -14,22 +14,28 @@
             
             <h1>Ciao Beatrix</h1>
             <p>Inserisci i nomi dei traditori e compi la tua vendetta!</p>
-            <div class="formTask">
+            <div class="form_task">
                 <input id="insert" type="text" @keyup.13="insertTask" v-model="toDo">
             <button @click="insertTask">Add Task</button>
             </div>
             <!-- lista delle task -->
            <div class="list_task">
+               <h2>Lista traditori</h2>
             <ul id="to_do" v-if="taskList.length > 0">
                 <li v-for="(task, index) in taskList" ><textarea name="" id="" cols="0" rows="0">{{task}}</textarea><i class="far fa-times-circle" @click="cancelTask(index)"></i>  </li>
+                
             </ul>
            <div class="fine" v-else >
+               <!-- quando le task sono finite -->
             <p>La tua vendetta ha finito il suo corso!</p>
-            <audio controls autoplay  >
+            <audio autoplay>
                 <source src="./assets/audio/bill_dies.mp3" type="audio/mpeg">
-            </audio>
-            
+            </audio>         
            </div>
+           </div>
+           <div class="list_task">
+            <h2>Traditori</h2>
+            <ul id="done_list"></ul>
            </div>
     
         </div>
