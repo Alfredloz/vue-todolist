@@ -1,8 +1,14 @@
-/* reset pagina */
+/* general settings */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+textarea{
+    resize: none;
+    width: 15rem;
+    height: 1rem;
+    border: none;
 }
 /* utility class */
 .d_flex{
